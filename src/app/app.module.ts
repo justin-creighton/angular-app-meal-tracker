@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { AddIngredientPageComponent } from './add-ingredient-page/add-ingredient-page.component';
 import { RecipeSearchPageComponent } from './recipe-search-page/recipe-search-page.component';
 import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-page.component';
 import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { MealsListComponent } from './meals-list/meals-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     AddIngredientPageComponent,
     RecipeSearchPageComponent,
     ShoppingListPageComponent,
-    IngredientsListComponent
+    IngredientsListComponent,
+    HomePageComponent,
+    MealsListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

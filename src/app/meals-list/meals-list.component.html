@@ -2,19 +2,19 @@
   <h1>Planned Meals</h1>
   <p *ngIf="isLoading">Loading...</p>
   <ng-container *ngIf="!isLoading">
-    <div class="list-item" *ngIf="let date of nextSevenDays; index as i">
+    <div class="list-item" *ngFor="let date of nextSevenDays; index as i">
       <ng-container *ngIf="mealsForDays[i]">
         <h3>{{date.getDate()}}</h3>
-        <p>{{mealsForDays[i].recipe.name}}</p>
+        <p>{{mealsForDays[i]?.recipe?.name}}</p>
         <div class="right-action">
-          <button (click)="onDelete(ingredient.name)"></button>
+          <button (click)="onDelete('test')"></button>
         </div>
       </ng-container>
       <ng-container *ngIf="!mealsForDays[i]">
         <h3>{{date.getDate()}}</h3>
         <p>No meal planned</p>
         <div class="right-action">
-          <a routerLink="/recipes" [queryParams]="{ date: date.toString() }" ]>
+          <a routerLink="/recipes" [queryParams]="{ date: date.toString() }">
             <button class="space-before">Add</button>
           </a>
         </div>

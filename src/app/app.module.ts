@@ -10,6 +10,7 @@ import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-pa
 import { IngredientsListComponent } from './ingredients-list/ingredients-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MealsListComponent } from './meals-list/meals-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { MealsListComponent } from './meals-list/meals-list.component';
     HomePageComponent,
     MealsListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

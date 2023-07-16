@@ -26,7 +26,7 @@ export class HomePageComponent implements OnInit {
       this.isLoadingMeals = false;
     });
 
-    this.mealsService.getIngredients().subscribe((ingredients) => {
+    this.ingredientsService.getIngredients().subscribe((ingredients) => {
       this.ingredients = ingredients;
       this.isLoadingIngredients = false;
     });
@@ -38,8 +38,8 @@ export class HomePageComponent implements OnInit {
     });
   }
 
-  onDeleteIngredient(mealId: string) {
-    this.mealsService
+  onDeleteIngredient(ingredientId: string) {
+    this.ingredientsService
       .deleteIngredient(ingredientId)
       .subscribe((updatedIngredient) => {
         this.ingredients = updatedIngredient;

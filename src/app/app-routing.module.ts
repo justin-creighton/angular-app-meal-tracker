@@ -9,7 +9,7 @@ const test = {};
 const meme = { test };
 const routes: Routes = [
   {
-    path: 'recipe',
+    path: 'recipes',
     component: RecipeSearchPageComponent,
   },
   {

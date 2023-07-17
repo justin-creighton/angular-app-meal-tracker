@@ -35,4 +35,14 @@ export class MealsService {
         ),
       );
   }
+
+  addMeal(date: string, recipeId: string): Observable<Meal[]> {
+    return this.http
+      .post<MealRaw[]>('/api/meals', { date, recipeId })
+      .pipe(
+        map((rawMeals) =>
+          rawMeals.map((rawMeal) => this.formatMealDate(rawMeal)),
+        ),
+      );
+  }
 }

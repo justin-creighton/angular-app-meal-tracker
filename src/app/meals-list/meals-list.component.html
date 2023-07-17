@@ -7,7 +7,7 @@
         <h3>{{date.getDate()}}</h3>
         <p>{{mealsForDays[i]?.recipe?.name}}</p>
         <div class="right-action">
-          <button (click)="onDelete('test')"></button>
+          <button (click)="onDelete(mealsForDays[i]!._id)"></button>
         </div>
       </ng-container>
       <ng-container *ngIf="!mealsForDays[i]">

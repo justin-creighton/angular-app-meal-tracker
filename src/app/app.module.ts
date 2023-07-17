@@ -11,6 +11,7 @@ import { IngredientsListComponent } from './ingredients-list/ingredients-list.co
 import { HomePageComponent } from './home-page/home-page.component';
 import { MealsListComponent } from './meals-list/meals-list.component';
 import { FormsModule } from '@angular/forms';
+import { RecipeSearchResultsListComponent } from './recipe-search-results-list/recipe-search-results-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     IngredientsListComponent,
     HomePageComponent,
     MealsListComponent,
+    RecipeSearchResultsListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

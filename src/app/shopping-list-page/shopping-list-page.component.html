@@ -1,1 +1,9 @@
-<p>shopping-list-page works!</p>
+<div class="page">
+  <div class="centered-container">
+    <h1>Here is your Shopping list</h1>
+    <p *ngIf="isLoading">Loading...</p>
+    <ng-container *ngIf="!isLoading">
+      <p *ngFor="let item of shoppingListItems">{{item}}</p>
+    </ng-container>
+  </div>
+</div>

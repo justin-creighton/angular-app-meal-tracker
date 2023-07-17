@@ -5,8 +5,6 @@ import { ShoppingListPageComponent } from './shopping-list-page/shopping-list-pa
 import { AddIngredientPageComponent } from './add-ingredient-page/add-ingredient-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
-const test = {};
-const meme = { test };
 const routes: Routes = [
   {
     path: 'recipes',

@@ -1,1 +1,8 @@
-<p>recipe-search-page works!</p>
+<div class="page">
+  <div>
+    <h1>Add Meal to Plan</h1>
+    <input type="text" placeholder="Enter keyword here" [(ngModel)]="searchValue" >
+    <button (click)="onSearchClicked()">Search</button>
+  </div>
+  <app-recipe-search-results-list [recipes]="searchResults" [ingredients]="ingredients"></app-recipe-search-results-list>
+</div>
